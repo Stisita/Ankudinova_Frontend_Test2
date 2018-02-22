@@ -1,0 +1,89 @@
+div.v1_row {
+  /*border: 1px solid;*/
+  min-width: 600px;
+  max-width: 1600px;
+  /*float: left;*/
+  box-sizing: border-box;
+} 
+div.v1_cell  { 
+  border: 1px solid;
+  width: 25%;
+  left: 0px;
+  right: 0px;
+  display:inline-block;
+  transition: 0.6s ease-out;
+  float: left;
+  box-sizing: border-box;
+}
+div.v1_cell:hover {
+  background : red;
+}
+div.v2_col { 
+  /*border: 1px solid;*/
+  width: 25%;
+  display:inline-block;
+  min-width: 150px;
+  max-width: 400px; 
+  box-sizing: border-box;   
+  float: left;    
+}      
+div.v2_cell {
+  border: 1px solid;
+  transition: 0.6s linear;
+  box-sizing: border-box;
+  /*float: left;*/
+} 
+div.v2_cell:hover {
+  background : red;
+}
+div.magic_block {
+  border-radius: 5px;
+  border: 1px solid;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-image: linear-gradient(#368ddc, #1b69af);
+  transition-timing-function: linear;
+  transition-property: visibility;
+  transition-duration: 5s;
+} 
+div.magic_block:hover {
+  visibility: hidden;
+  /*border: 10px solid;*/
+}
+
+button.up {
+  padding: 0;
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: buttonface;
+}
+
+   .flip {
+    position: relative; /* Относительное позиционирование */
+    left: -39px;
+    top: -13px;
+    transform-style: preserve-3d; /* Вращение в 3D */
+    width: 66px; 
+    height: 66px; /* Ширина и высота */
+    transition: 0s; /* Время вращения */
+    padding: 0;
+   }
+   .flip:hover {
+    transform: rotateY(180deg); /* При наведении вращаем фото */
+   }
+   .flip-face {
+    margin: 0;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; 
+    bottom: 0; /* Задаём так равную высоту */
+   }
+   .flip-face.back {
+    margin: 0;
+    background: buttonface;
+    padding: 2px;
+    font-size: 10pt;
+    transform: rotateY(180deg); /* Вращаем по оси Y */
+    backface-visibility: hidden; /* Скрываем обратную поверхность */
+   }
